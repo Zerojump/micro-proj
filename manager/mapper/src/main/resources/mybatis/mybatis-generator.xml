@@ -49,6 +49,7 @@
         mybatis.type-aliases-package=org.springboot.sample.entity
         -->
         <!--此处的targetPackage，应该和javaClientGenerator元素的targetPackage属性相同-->
+	<!--如果使用的javaClientGenerator.type是XMLMAPPER，记得要加这个配置-->
         <sqlMapGenerator targetPackage="com.cmy.mapper" targetProject="src\main\java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
