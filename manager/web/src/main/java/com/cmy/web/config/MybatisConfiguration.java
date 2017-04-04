@@ -1,4 +1,4 @@
-package com.cmy.web;
+package com.cmy.web.config;
 
 import com.github.pagehelper.PageHelper;
 import org.slf4j.Logger;

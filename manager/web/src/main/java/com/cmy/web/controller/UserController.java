@@ -3,12 +3,12 @@ package com.cmy.web.controller;
 import com.cmy.mapper.UserMapper;
 import com.cmy.model.User;
 import com.cmy.model.UserExample;
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,6 +25,9 @@ public class UserController {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private ApplicationContext context;
 
     @RequestMapping(value = "{id}", method = RequestMethod.GET)
     public User getById(@PathVariable Long id) {
